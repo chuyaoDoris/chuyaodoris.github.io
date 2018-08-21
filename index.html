@@ -1,0 +1,69 @@
+<!Doctype html>
+<html>
+<head>
+  <title> Firebase Web Basics </title>
+  <link href="https://fonts.googleapis.com/cssfamily=Raleway:300,400,500,700" rel = "stylesheet">
+  <script scr="https://use.fontawesome.com/939e9dd52c.js"></script>
+  <link rel = "stylesheet" href="style.css">
+</head>
+<body>
+  <div style="background-image:linear-gradient(#0062E9,#00BDF8); width:100%; height: 200%; position: absolute; padding-top: 10%; padding-left: 10%; padding-right: 10%;">
+    <div style="height: 1500px; background-color: rgba(255,255,255,0.5); text-align: center;">
+      <h1 style="color:white;"> Form Submission </h1>
+      <form action="completed.html">
+          <h3> Name </h3>
+          <br><input type="text" id="name"><br>
+          <h3> Gender </h3> 
+          <input type="radio" id="gender" value="male" > Male<br>
+          <input type="radio" id="gender" value="female"> Female <br>
+          <input type="radio" id="gender" value="other"> Other <br>
+          <h3> Age </h3>
+          <br><input type="number" id="age"> </br>
+          <h3> Weight (kg) </h3>
+          <br><input type="number" id="weight"> </br>
+          <h3> Height (cm) </h3>
+          <br><input type="number" id="height"> </br>
+          <h3> Current Mood </h3>
+          <br>
+          <input type="radio" id="mood" value="awesome"> Awesome<br>
+          <input type="radio" id="mood" value="good"> Good <br>
+          <input type="radio" id="mood" value="so-so"> So-so <br>
+          <input type="radio" id="mood" value="bad"> Bad <br>
+          <input type="radio" id="mood" value="so-so"> Sick <br>
+          <h3> Body Temperature </h3>
+          <br><input type="number" id="bodytemperature"> </br>
+          <h3> Blood Pressure (diastolic) </h3>
+          <br><input type="number" id="diastolicbloodpressure"> </br>
+          <h3> Blood Pressure (systolic) </h3>
+          <br><input type="number" id="systolicbloodpressure"> </br>
+          <h3> Heart Rate (bpm) </h3>
+          <br><input type="number" id="heartrate"> </br>
+          <h3> Date (mm/dd/yyyy) </h3>
+          <br><input type="text" id="date"></br>
+          <h3> File of Pulse Wave Data  </h3>
+          <br><input type="file" id="pulsewavedatafile"> </br>
+          <progress value="0" max="100" id="uploader"> </progress>
+<!--          <input type="submit" value="Submit" id="submitBtn" onclick="submitClick()"> </br>
+ -->      </form>
+      <button id = "submitBtn" onclick="submitClick()"> Submit<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+
+    </div>
+
+
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+    var config = {
+    apiKey: "AIzaSyCLLF-IISLEgKsCCMMNKXRYgBikmY7EX5c",
+    authDomain: "sensordata-b4006.firebaseapp.com",
+    databaseURL: "https://sensordata-b4006.firebaseio.com",
+    projectId: "sensordata-b4006",
+    storageBucket: "sensordata-b4006.appspot.com",
+    messagingSenderId: "1033367473658"
+  };
+  firebase.initializeApp(config);
+  </script>
+  <script src="index.js"></script>
+</body>
+</html>
